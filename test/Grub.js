@@ -1,12 +1,12 @@
-require('mocha')
-const chai = require('chai')
-const expect = chai.expect
-const Grub = require('../src/Grub')
+require('mocha');
+const chai = require('chai');
+const expect = chai.expect;
+const Grub = require('../src/Grub');
 
 describe('Grub class functionality', () => {
   var grub;
 
-  beforeEach(() => grub = new Grub());
+  beforeEach(() => (grub = new Grub()));
 
   it('`age` 속성은 `0`이어야 합니다', () => {
     expect(grub.age).to.equal(0);
@@ -24,7 +24,7 @@ describe('Grub class functionality', () => {
     expect(grub.eat).to.be.a('function');
   });
 
-  it('`eat` 메소드를 통해 `Grub`이 젤리를 먹습니다', () => {
+  it('`eat` 메소드를 실행할때 `Mmmmmmmmm jelly`가 출력되도록 작성합니다', () => {
     expect(grub.eat()).to.equal('Mmmmmmmmm jelly');
   });
 });
