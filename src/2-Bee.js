@@ -1,4 +1,4 @@
-const Grub = require('./Grub');
+const Grub = require('./1-Grub');
 
 class Bee {
   // TODO..
