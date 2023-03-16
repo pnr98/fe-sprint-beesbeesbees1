@@ -28,7 +28,7 @@ describe('ForagerBee class functionality', () => {
     expect(foragerBee.food).to.equal('jelly');
   });
 
-  it('`eat` 메소드는 `Grub`으로부터 상속받습니다', () => {
+  it('`eat` 메서드는 `Grub`으로부터 상속받습니다', () => {
     expect(foragerBee.eat).to.be.a('function');
   });
 
@@ -42,7 +42,7 @@ describe('ForagerBee class functionality', () => {
     expect(foragerBee.treasureChest).to.be.a('array');
   });
 
-  it('`forage` 메소드를 통해 `treasureChest` 속성에 보물을 추가할 수 있어야 합니다', () => {
+  it('`forage` 메드를 통해 `treasureChest` 속성에 보물을 추가할 수 있어야 합니다', () => {
     foragerBee.forage('pollen');
     foragerBee.forage('flowers');
     foragerBee.forage('gold');
