@@ -1,14 +1,12 @@
 require('mocha');
 const chai = require('chai');
 const expect = chai.expect;
-const ForagerBee = require('../src/ForagerBee');
+const ForagerBee = require('../src/3-ForagerBee');
 
 describe('ForagerBee class functionality', () => {
   var foragerBee;
 
   beforeEach(() => (foragerBee = new ForagerBee()));
-
-  /*  Overwrite methods from superclass  */
 
   it('`age` 속성은 `10`이어야 합니다', () => {
     expect(foragerBee.age).to.equal(10);
@@ -17,8 +15,6 @@ describe('ForagerBee class functionality', () => {
   it('`job` 속성은 `find pollen`이어야 합니다', () => {
     expect(foragerBee.job).to.equal('find pollen');
   });
-
-  /*  Inherited from superclass  */
 
   it('`color` 속성은 `Bee`로부터 상속받습니다', () => {
     expect(foragerBee.color).to.equal('yellow');
@@ -32,8 +28,6 @@ describe('ForagerBee class functionality', () => {
     expect(foragerBee.eat).to.be.a('function');
   });
 
-  /*  New methods and properties  */
-
   it('`canFly` 속성은 `true`이어야 합니다', () => {
     expect(foragerBee.canFly).to.equal(true);
   });
@@ -42,7 +36,7 @@ describe('ForagerBee class functionality', () => {
     expect(foragerBee.treasureChest).to.be.a('array');
   });
 
-  it('`forage` 메드를 통해 `treasureChest` 속성에 보물을 추가할 수 있어야 합니다', () => {
+  it('`forage` 메서드를 통해 `treasureChest` 속성에 보물을 추가할 수 있어야 합니다', () => {
     foragerBee.forage('pollen');
     foragerBee.forage('flowers');
     foragerBee.forage('gold');
