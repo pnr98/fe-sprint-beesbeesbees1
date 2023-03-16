@@ -20,11 +20,11 @@ describe('Grub class functionality', () => {
     expect(grub.food).to.equal('jelly');
   });
 
-  it('`eat` 메소드가 존재해야 합니다', () => {
+  it('`eat` 메서드가 존재해야 합니다', () => {
     expect(grub.eat).to.be.a('function');
   });
 
-  it('`eat` 메소드를 실행할때 `Mmmmmmmmm jelly`가 출력되도록 작성합니다', () => {
+  it('`eat` 메서드는 `Mmmmmmmmm jelly`를 리턴합니다.', () => {
     expect(grub.eat()).to.equal('Mmmmmmmmm jelly');
   });
 });
