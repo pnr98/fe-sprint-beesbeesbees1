@@ -6,10 +6,10 @@ const Grub = require('./1-Grub');
 // 5) `job` 속성은 `Keep on growing`이어야 합니다
 
 class Bee extends Grub {   // Grub 상속
-  constructor(age, color) {
-    super(age, color, Grub.prototype.food) // 부모 클래스의 생성자 호출
-      this.age = 5  // 속성값 변경
-      this.color = 'yellow' 
+  constructor(age, color, food, job) {
+    super(age, color, food) // 부모 클래스의 생성자 호출
+    this.age = 5  // 속성값 변경
+    this.color = 'yellow' 
     this.job = `Keep on growing` // 새로운 속성 생성
   }
 
